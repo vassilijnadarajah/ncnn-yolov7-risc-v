@@ -19,8 +19,8 @@ find_package(ncnn REQUIRED)
 
 add_executable(ncnn_yolov7_risc_v
         main.cpp
-        src/YoloV7.h
-        src/YoloV7.cpp
+        src/yolov7.h
+        src/yolov7.cpp
 )
 
 target_link_libraries(ncnn_yolov7_risc_v ncnn)

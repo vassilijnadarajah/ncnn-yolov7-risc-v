@@ -2,3 +2,4 @@ include/ncnn_apple_m1
 cmake-build-debug
 .idea
 lib_apple_m1
+build-c906/
