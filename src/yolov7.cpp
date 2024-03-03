@@ -190,7 +190,6 @@ int YoloV7::detect(const cv::Mat& bgr, std::vector<Object>& objects)
     int img_w = bgr.cols;
     int img_h = bgr.rows;
 
-    // yolov5/models/common.py DetectMultiBackend
     const int max_stride = 64;
 
     // letterbox pad to multiple of max_stride
@@ -213,7 +212,6 @@ int YoloV7::detect(const cv::Mat& bgr, std::vector<Object>& objects)
     ncnn::Mat in = ncnn::Mat::from_pixels_resize(bgr.data, ncnn::Mat::PIXEL_BGR2RGB, img_w, img_h, w, h);
 
     // pad to target_size rectangle
-    // yolov5/utils/datasets.py letterbox
     int wpad = (w + max_stride - 1) / max_stride * max_stride - w;
     int hpad = (h + max_stride - 1) / max_stride * max_stride - h;
     ncnn::Mat in_pad;
