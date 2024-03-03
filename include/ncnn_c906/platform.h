@@ -58,7 +58,7 @@
 #define NCNN_MSA 0
 #define NCNN_LSX 0
 #define NCNN_MMI 0
-#define NCNN_RVV 1
+#define NCNN_RVV 0
 #define NCNN_INT8 1
 #define NCNN_BF16 1
 #define NCNN_FORCE_INLINE 1

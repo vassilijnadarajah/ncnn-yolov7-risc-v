@@ -7,8 +7,8 @@ using namespace yolo;
 
 // original pretrained model from https://github.com/WongKinYiu/yolov7
 // converted with pnnx https://github.com/pnnx/pnnx
-const char* YoloV7::path_to_param = "../resources/yolov7_tiny.torchscript.ncnn.param";
-const char* YoloV7::path_to_bin = "../resources/yolov7_tiny.torchscript.ncnn.bin";
+const char* YoloV7::path_to_param = "resources/yolov7_tiny.torchscript.ncnn.param";
+const char* YoloV7::path_to_bin = "resources/yolov7_tiny.torchscript.ncnn.bin";
 
 float YoloV7::intersection_area(const Object& a, const Object& b)
 {
