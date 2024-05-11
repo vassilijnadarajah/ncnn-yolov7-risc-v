@@ -3,7 +3,7 @@
 # nadarajah@campus.tu-berlin.de
 
 cmake_minimum_required(VERSION 3.16)
-project(ncnn_yolo_nvh)
+project(ncnn_yolov7_risc_v)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -30,10 +30,10 @@ endif()
 
 find_package(ncnn REQUIRED)
 
-add_executable(ncnn_yolo_nvh
+add_executable(ncnn_yolov7_risc_v
         src/main.cpp
         src/YoloV7.h
         src/YoloV7.cpp
         )
 
-target_link_libraries(ncnn_yolo_nvh ncnn)
+target_link_libraries(ncnn_yolov7_risc_v ncnn)
