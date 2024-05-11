@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: GPL-3.0-only
+# (C) 2024 Vassilij Nadarajah, TU Berlin
+# nadarajah@campus.tu-berlin.de
+
 set(CMAKE_SYSTEM_NAME Linux)
 set(CMAKE_SYSTEM_PROCESSOR riscv64)
 set(C906 True)
@@ -20,7 +24,7 @@ set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
 
-if (RVV_ENABLED)
+if (RVV)
     set(CMAKE_C_FLAGS "-march=rv64gcv0p7_zfh_xtheadc -mabi=lp64d -mtune=c906 -DC906=1 -static")
     set(CMAKE_CXX_FLAGS "-march=rv64gcv0p7_zfh_xtheadc -mabi=lp64d -mtune=c906 -DC906=1 -static")
 else ()
@@ -32,4 +36,4 @@ endif()
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}" CACHE STRING "c flags")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}" CACHE STRING "c++ flags")
 
-# cmake -DCMAKE_TOOLCHAIN_FILE=../toolchains/c906-v226.toolchain.cmake DRVV_ENABLED=ON..
+# cmake -DCMAKE_TOOLCHAIN_FILE=../toolchains/c906-v226.toolchain.cmake DRVV=ON ..
